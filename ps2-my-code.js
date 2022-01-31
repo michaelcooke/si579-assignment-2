@@ -10,6 +10,7 @@
  */
 
 function addOne(x) {
+  return x + 1;
 }
 
 
@@ -19,6 +20,13 @@ function addOne(x) {
  */
 
 function largest(lst) {
+  let max = null
+  lst.forEach(item => {
+    if (max == null || item.length > max.length) {
+      max = item
+    }
+  })
+  return max
 }
 
 /**
@@ -33,6 +41,11 @@ function largest(lst) {
  */
 
 function fact(n) {
+  result = 1
+  for (let i=n; i>0; i--) {
+    result *= i
+  }
+  return result
 }
 
 /**
@@ -57,4 +70,9 @@ function fact(n) {
   */
 
 function fib(n) {
+  if (n <= 1) {
+    return 1
+  }
+
+  return fib(n-1) + fib(n-2)
 }
