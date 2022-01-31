@@ -21,9 +21,9 @@ function addOne(x) {
 
 function largest(lst) {
   let max = null
-  lst.forEach(item => {
-    if (max == null || item.length > max.length) {
-      max = item
+  lst.forEach(num => {
+    if (max == null || num > max) {
+      max = num
     }
   })
   return max
@@ -70,8 +70,10 @@ function fact(n) {
   */
 
 function fib(n) {
-  if (n <= 1) {
+  if (n === 1) {
     return 1
+  } else if (n === 0) {
+    return 0
   }
 
   return fib(n-1) + fib(n-2)
